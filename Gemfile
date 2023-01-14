@@ -59,3 +59,11 @@ gem 'devise'
 
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'rails-i18n'
+gem 'jquery-rails'
+gem 'pry-rails'
+gem "font-awesome-sass", "~> 6.1.2"

@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: "homes#home"
+  get 'homes/home'
+  get 'rooms/new'
+  get 'reservations/index'
+  get 'users/account'
+
+  get '/account',to:'users#account'
+  get '/profile',to:'users#profile'
+
+  devise_for :users,controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
+
+  resources :users
+  get 'rooms/search',to:'rooms#search'
+  get 'rooms/posts',to:'rooms#posts'
+  resources :rooms
+  resources :reservations
+
 end
